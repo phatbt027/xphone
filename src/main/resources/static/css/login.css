@@ -1,0 +1,91 @@
+body {
+    background: lightgrey;
+}
+
+.container {
+    width: 420px;
+    height: 250px;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 0 15px 15px rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    grid-gap: 15px;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-row label {
+    text-align: right;
+    font-size: larger;
+    color: white;
+    font-weight: 500;
+}
+
+.form-row input {
+    border-radius: 4px;
+    border: 0;
+    height: 25px;
+    padding-left: 10px;
+}
+
+.form-row input:focus {
+    outline: none;
+}
+
+.form-row-sub {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.rememberMe {
+    color: white;
+    user-select: none;
+}
+
+.forgotPassword {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.form-row-sub a:hover {
+    color: rgb(50, 50, 50);
+    text-decoration: underline;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    box-shadow: 0 0 4px 4px rgb(255, 255, 255);
+    margin-left: 32%;
+    margin-top: 10px;
+    color: rgb(255, 0, 0);
+}
+
+button:active {
+    transition: all 0.2s ease;
+    box-shadow: 0 0 2px 2px rgb(255, 255, 255);
+    translate: 1px 3px;
+}
+

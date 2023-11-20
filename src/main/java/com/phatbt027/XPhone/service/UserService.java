@@ -13,9 +13,9 @@ public interface UserService {
 	
 	UserDto getUserByUsername(String password);
 	
-	User saveUser(UserDto userDto);
+	User saveUser(final UserDto userDto);
 
 	void deleteUser(int userId);
 
-	User updateUser(UserDto userDto);
+	User updateUser(final UserDto userDto);
 }

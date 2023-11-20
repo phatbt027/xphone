@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.phatbt027.XPhone.dto.UserDto;
@@ -44,7 +43,7 @@ public class UserServiceImpl implements UserService {
 	public List<UserDto> getAllUser() {
 
 		List<UserDto> userDtoList = new ArrayList<UserDto>();
-		
+
 		for(User user : userRepository.findAll()) {
 			UserDto dto = mapUserDto(user);
 			userDtoList.add(dto);
@@ -55,7 +54,7 @@ public class UserServiceImpl implements UserService {
 
 	// Save user by user dto
 	@Override
-	public User saveUser(UserDto dto) {
+	public User saveUser(final UserDto dto) {
 
 		User user = mapUser(dto);
 
@@ -72,7 +71,7 @@ public class UserServiceImpl implements UserService {
 
 	// Update user by user dto
 	@Override
-	public User updateUser(UserDto dto) {
+	public User updateUser(final UserDto dto) {
 
 		User user = mapUser(dto);
 
@@ -80,7 +79,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	// Mapping user dto to user
-	private UserDto mapUserDto(User user) {
+	private UserDto mapUserDto(final User user) {
 		
 		UserDto dto = new UserDto();
 		dto.setId(user.getId());
@@ -92,7 +91,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	// Mapping user to user dto
-	private User mapUser(UserDto dto) {
+	private User mapUser(final UserDto dto) {
 		
 		User user = new User();
 		user.setId(dto.getId());
